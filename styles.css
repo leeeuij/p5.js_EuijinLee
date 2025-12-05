@@ -1,9 +1,4 @@
-/* ===================================
-   SIMPLE p5.js PORTFOLIO TEMPLATE
-   Focus: Clean layout for creative coding projects
-   =================================== */
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -70,12 +65,12 @@ main {
 
 /* HERO */
 .hero {
-    height: 55vh;
-    min-height: 340px;
+    height: 25vh;
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px; /* offset for fixed nav */
+    margin-top: 20px; /* offset for fixed nav */
     text-align: center;
 }
 
