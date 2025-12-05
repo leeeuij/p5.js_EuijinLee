@@ -104,10 +104,10 @@ main {
 }
 
 .project-grid {
-    margin-top: 24px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 32px; 
+    margin-top: 32px;
 }
 
 .project-card {
@@ -185,3 +185,8 @@ main {
     opacity: 0.6;
 }
 
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
