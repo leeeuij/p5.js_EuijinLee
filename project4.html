@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4 – Exquisite Corpse | CC Lab Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="top-nav">
+    <div class="nav-inner">
+        <div class="nav-logo"><a href="index.html">Euijin Lee</a></div>
+        <nav class="nav-links">
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#about">About</a>
+        </nav>
+    </div>
+</header>
+
+<main style="max-width: 960px; margin: 0 auto; padding: 96px 20px 80px;">
+    <section class="section">
+        <h2>Assignment 4 – Exquisite Corpse</h2>
+        <p class="project-tag">p5.js</p>
+        <p style="margin-top: 10px;">
+            A hybrid character built from three partners’ drawings, featuring animated ears
+            and clickable belly patterns inside a Halloween-themed scene.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3>Sketch</h3>
+        <div class="project-card" style="margin-top: 10px;">
+            <div class="sketch-embed">
+                <iframe
+                    src="https://editor.p5js.org/leeeuij/full/gsJTqck4U"
+                    width="100%"
+                    height="420"
+                    style="border:0;"
+                    loading="lazy"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Process &amp; Reflection</h3>
+        <p style="margin-top: 10px;">
+            I started with my friend’s dog Choco, who acts so human that I imagined
+            “Choco commuting to work.” Sanjana shared a cat-inspired character; I especially
+            liked the belly pattern in her sketches. Matthew drew a scarecrow wearing a
+            pumpkin Halloween costume. To harmonize our parts, I used my head, Sanjana’s
+            cat belly translated into a four-ellipse pattern, and Matthew’s scarecrow legs
+            and boots. I set the background to a Halloween color gradient and added a
+            corner spiderweb so Matthew’s theme carries through the whole scene.
+        </p>
+        <p style="margin-top: 10px;">
+            I created three belly patterns and used an <code>if/else</code> structure to
+            switch between them. On each click, <code>patternMode</code> updates so the
+            pattern cycles. I struggled with the ear animation at first because the
+            rotation pivot felt wrong, but fixing the pivot point and using
+            <code>translate() → rotate()</code> in that order made the flap feel natural.
+            Then I used <code>sin(frameCount * flapSpeed)</code> to animate the ears.
+        </p>
+        <p style="margin-top: 10px;">
+            I split the code into user-defined functions like
+            <code>drawBody(mode)</code>, <code>drawHead(flapSpeed, flapDeg)</code>, and
+            <code>drawFeet()</code>, and passed real values from <code>draw()</code>.
+            For the background, I used a simple loop to make a vertical gradient and more
+            loops to draw the spiderweb. If I had more time, I would add a small “boot
+            bounce” animation so the character feels even more alive.
+        </p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Euijin Lee · CC Lab</p>
+</footer>
+</body>
+</html>

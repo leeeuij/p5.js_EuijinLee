@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CC Lab Portfolio | Euijin Lee</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        .project-card {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-card iframe {
+            pointer-events: auto;
+            z-index: 5;
+            position: relative;
+        }
+
+        .project-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .sketch-embed {
+            position: relative;
+            z-index: 10;
+        }
+        .sketch-embed iframe {
+            position: relative;
+            z-index: 20;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <header class="top-nav">
+        <div class="nav-inner">
+            <div class="nav-logo">Euijin Lee</div>
+            <nav class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="hero-label">Critical Computation Lab</p>
+                <h1>p5.js Portfolio</h1>
+                <p class="hero-sub">
+                    Browser-based sketches created in CC Lab.<br />
+                    MFA Design & Technology · Parsons School of Design
+                </p>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+
+                <!-- ---------------- PROJECT 1 ---------------- -->
+                <div class="project-card" data-link="project1.html">
+                    <span class="project-tag">p5.js</span>
+                    <h3>Assignment 1 – Lost & Found</h3>
+                    <p>Recreating a partner’s memory as a coded top-down floor plan with simple shapes and animated fans.</p>
+
+                    <div class="sketch-embed">
+                        <iframe src="https://editor.p5js.org/leeeuij/full/jVUZoj_84"
+                                width="100%" height="360" style="border:0;"></iframe>
+                    </div>
+                </div>
+
+                <!-- ---------------- PROJECT 2 ---------------- -->
+                <div class="project-card" data-link="project2.html">
+                    <span class="project-tag">p5.js</span>
+                    <h3>Assignment 2 – Face Generator</h3>
+                    <p>An interactive random face generator with mouse-tracking eyes and simple key-based expressions.</p>
+
+                    <div class="sketch-embed">
+                        <iframe src="https://editor.p5js.org/leeeuij/full/nh2UfPcN7"
+                                width="100%" height="360" style="border:0;"></iframe>
+                    </div>
+                </div>
+
+                <!-- ---------------- PROJECT 3 ---------------- -->
+                <div class="project-card" data-link="project3.html">
+                    <span class="project-tag">p5.js</span>
+                    <h3>Assignment 3 – Brain Time Clock</h3>
+                    <p>A two-layer clock where personal time only moves when the cursor rests calmly in the center.</p>
+
+                    <div class="sketch-embed">
+                        <iframe src="https://editor.p5js.org/leeeuij/full/_El29lXCB"
+                                width="100%" height="360" style="border:0;"></iframe>
+                    </div>
+                </div>
+
+                <!-- ---------------- PROJECT 4 ---------------- -->
+                <div class="project-card" data-link="project4.html">
+                    <span class="project-tag">p5.js</span>
+                    <h3>Assignment 4 – Exquisite Corpse</h3>
+                    <p>A hybrid character combining 3 partners’ drawings, with animated ears and clickable pattern changes.</p>
+
+                    <div class="sketch-embed">
+                        <iframe src="https://editor.p5js.org/leeeuij/full/gsJTqck4U"
+                                width="100%" height="360" style="border:0;"></iframe>
+                    </div>
+                </div>
+
+                <!-- ---------------- PROJECT 5 ---------------- -->
+                <div class="project-card" data-link="project5.html">
+                    <span class="project-tag">p5.js</span>
+                    <h3>Assignment 5 – Optical Illusion</h3>
+                    <p>A rotating spiral illusion built from nested loops, speeding up with mouse press to intensify motion.</p>
+
+                    <div class="sketch-embed">
+                        <iframe src="https://editor.p5js.org/leeeuij/full/_M1pG_n-8"
+                                width="100%" height="360" style="border:0;"></iframe>
+                    </div>
+                </div>
+
+                <!-- ---------------- PROJECT 6 ---------------- -->
+                <div class="project-card" data-link="project6.html">
+                    <span class="project-tag">p5.js</span>
+                    <h3>Assignment 6 – Data Portrait</h3>
+                    <p>A circular visualization of when I checked the clock over six days, with dots that glow as time passes.</p>
+
+                    <div class="sketch-embed">
+                        <iframe src="https://editor.p5js.org/leeeuij/full/flRmSBU_j"
+                                width="100%" height="360" style="border:0;"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section section-about">
+            <h2>About</h2>
+            <p>
+                I am Euijin Lee, a first-year MFA Design & Technology student at Parsons School of Design in New York.
+            </p>
+            <p>
+                In CC Lab, I explored drawing with code, interactions, and generative patterns using p5.js.
+                I enjoy clean, minimal visuals and computational aesthetics.
+            </p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© 2025 Euijin Lee · CC Lab</p>
+    </footer>
+
+    <!-- Card click → navigate -->
+    <script>
+        document.querySelectorAll(".project-card").forEach(card => {
+            card.addEventListener("click", e => {
+                if (e.target.tagName === "IFRAME") return;
+
+                const link = card.getAttribute("data-link");
+                if (link) window.location.href = link;
+            });
+        });
+    </script>
+
+</body>
+</html>

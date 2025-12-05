@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3 – Brain Time Clock | CC Lab Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="top-nav">
+    <div class="nav-inner">
+        <div class="nav-logo"><a href="index.html">Euijin Lee</a></div>
+        <nav class="nav-links">
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#about">About</a>
+        </nav>
+    </div>
+</header>
+
+<main style="max-width: 960px; margin: 0 auto; padding: 96px 20px 80px;">
+    <section class="section">
+        <h2>Assignment 3 – Brain Time Clock</h2>
+        <p class="project-tag">p5.js</p>
+        <p style="margin-top: 10px;">
+            A two-layer clock where personal time only moves when the cursor rests calmly
+            in the center circle, showing the gap between time that passes and time I
+            actually inhabit.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3>Sketch</h3>
+        <div class="project-card" style="margin-top: 10px;">
+            <div class="sketch-embed">
+                <iframe
+                    src="https://editor.p5js.org/leeeuij/full/_El29lXCB"
+                    width="100%"
+                    height="420"
+                    style="border:0;"
+                    loading="lazy"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Description &amp; Reflection</h3>
+        <p style="margin-top: 10px;">
+            This clock shows two timelines side by side: STANDARD TIME (elapsed since
+            launch) and PERSONAL TIME (time I actually inhabit). PERSONAL TIME advances
+            only when I sit inside the center circle and keep the cursor still for two
+            seconds. When I am calm, a clean ring fills and gentle circles expand outward.
+            When I am rushing or fidgeting, noisy waves appear and PERSONAL TIME freezes.
+            The monochrome look keeps the rule readable without distraction.
+        </p>
+        <p style="margin-top: 10px;">
+            I started with three brainstorms: a Stillness Clock that only advances when the
+            mouse is still, a Focus Circle Clock that tracks time only inside a central
+            circle, and an Energy Budget Clock that spends down a daily energy bar. While
+            prototyping, I noticed a real habit: when I have too many tasks, time feels
+            like it’s racing, and if I pause briefly to list tasks, breathe, or close my
+            eyes, time feels normal again. That insight led me to merge the stillness gate
+            with the focus circle.
+        </p>
+        <p style="margin-top: 10px;">
+            Translating this into code taught me to think in milliseconds with
+            <code>millis()</code> and <code>deltaTime</code>, to use <code>map()</code> to
+            turn data into angles and ring lengths, and to use <code>noise()</code> for
+            motion that reads as disorder vs. order. While using the clock, I can literally
+            see PERSONAL TIME freeze when I rush, which makes me stop and re-enter the
+            center on purpose. In the end it visualizes time the way my mind experiences
+            it: calm flows, chaos freezes.
+        </p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Euijin Lee · CC Lab</p>
+</footer>
+</body>
+</html>

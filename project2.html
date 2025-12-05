@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2 – Face Generator | CC Lab Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="top-nav">
+    <div class="nav-inner">
+        <div class="nav-logo"><a href="index.html">Euijin Lee</a></div>
+        <nav class="nav-links">
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#about">About</a>
+        </nav>
+    </div>
+</header>
+
+<main style="max-width: 960px; margin: 0 auto; padding: 96px 20px 80px;">
+    <section class="section">
+        <h2>Assignment 2 – Face Generator</h2>
+        <p class="project-tag">p5.js</p>
+        <p style="margin-top: 10px;">
+            An interactive random face generator with mouse-tracking eyes and simple key
+            controls that change expressions, backgrounds, and allow saving snapshots.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3>Sketch</h3>
+        <div class="project-card" style="margin-top: 10px;">
+            <div class="sketch-embed">
+                <iframe
+                    src="https://editor.p5js.org/leeeuij/full/nh2UfPcN7"
+                    width="100%"
+                    height="420"
+                    style="border:0;"
+                    loading="lazy"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Reflection</h3>
+        <p style="margin-top: 10px;">
+            My idea for this project was to make a playful face generator that feels alive
+            and interactive. I separated the code into functions for each part of the face
+            – head, eyes, nose, and mouth – so I could focus on them one by one and easily
+            make changes. Random ranges control the size and color, so every new face looks
+            a little different. I also added simple interactions: clicking changes the
+            background, pressing <code>R</code> makes a new random face, <code>M</code>
+            changes the mouth expression, and <code>S</code> saves the image.
+        </p>
+        <p style="margin-top: 10px;">
+            While building it, I learned how important small details are. Making the pupils
+            follow the mouse with <code>map()</code> gave the face more personality, but
+            only when I kept the range small enough. I struggled with
+            <code>keyPressed()</code> not working at first, and fixed it by cleaning up the
+            conditions and testing core interactions with <code>console.log</code>. I also
+            had to be careful about drawing order: the instruction text needed to be drawn
+            after <code>pop()</code>, otherwise it moved off the screen.
+        </p>
+        <p style="margin-top: 10px;">
+            One limitation is that I couldn’t implement hair. I wanted to generate
+            hairstyles that adapt to each head shape, but it was harder than I expected.
+            Since every head has a slightly different width and height, the hair needed to
+            respond dynamically, and I wasn’t sure how to calculate it cleanly. With more
+            time, I would explore arcs, curves, or separate hair assets that scale based on
+            the head size.
+        </p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Euijin Lee · CC Lab</p>
+</footer>
+</body>
+</html>
