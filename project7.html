@@ -8,43 +8,90 @@
 </head>
 
 <body>
-    <header class="top-nav">
-        <div class="nav-inner">
-            <div class="nav-logo">
-                <a href="index.html">Euijin Lee</a>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html#projects">Projects</a>
-                <a href="index.html#about">About</a>
-            </nav>
+
+<header class="top-nav">
+    <div class="nav-inner">
+        <div class="nav-logo">
+            <a href="index.html">Euijin Lee</a>
         </div>
-    </header>
+        <nav class="nav-links">
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#about">About</a>
+        </nav>
+    </div>
+</header>
 
-    <main style="max-width: 960px; margin: 0 auto; padding: 96px 20px 80px;">
-        <section class="section">
-            <h2>Assignment 7 – Autobiographical Game</h2>
-            <p class="project-tag">p5.js</p>
-            <p style="margin-top: 10px;">
-                A simple autobiographical narrative game built with p5.js,
-                using objects, collisions, and scene switching to explore
-                memory and personal experience.
-            </p>
-        </section>
+<main style="max-width: 960px; margin: 0 auto; padding: 96px 20px 80px;">
 
-        <section class="section">
-            <h3>Sketch</h3>
+    <!-- TITLE / INTRO -->
+    <section class="section">
+        <h2>Assignment 7 – Autobiographical Game</h2>
+        <p class="project-tag">p5.js</p>
+        <p style="margin-top: 10px;">
+            A simple autobiographical narrative game built with p5.js, using
+            objects, collision detection, and scene switching to explore
+            memory, movement, and personal experience.
+        </p>
+    </section>
 
+    <!-- SKETCH -->
+    <section class="section">
+        <h3>Sketch</h3>
+
+        <div class="project-card" style="margin-top: 10px;">
             <div class="sketch-embed">
                 <iframe
                     src="https://editor.p5js.org/leeeuij/full/vsJub7PW0"
-                    allowfullscreen>
-                </iframe>
+                    width="100%"
+                    height="420"
+                    style="border:0;"
+                    loading="lazy"
+                ></iframe>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="site-footer">
-        <p>© 2025 Euijin Lee · CC Lab</p>
-    </footer>
+    <!-- DESCRIPTION & REFLECTION -->
+    <section class="section">
+        <h3>Description &amp; Reflection</h3>
+
+        <p style="margin-top: 10px;">
+            This project started from my interest in dreams as places you move
+            through, rather than stories you control. I wanted to make a simple
+            game where the player drifts between different dream-like spaces,
+            each with its own mood and rules.
+        </p>
+
+        <p style="margin-top: 10px;">
+            I planned the game as a series of scenes, including a bedroom, a
+            corridor, an underwater space, and a waking moment. I used a scene
+            variable and slow fades to move between them, so the experience
+            would feel smooth instead of sudden. In p5.js, I used simple
+            shapes, particles, and light to keep the visuals emotional and
+            slightly unclear, like a dream.
+        </p>
+
+        <p style="margin-top: 10px;">
+            The interaction is very simple. There is no clear win or goal.
+            Instead, the player learns how to move with the environment, such
+            as staying inside moving light. I adjusted speed, brightness, and
+            timing many times to keep the experience calm, not stressful.
+        </p>
+
+        <p style="margin-top: 10px;">
+            During testing, I realized how hard it was to balance the
+            difficulty. Small changes in timing or collision size could
+            quickly make the game feel either frustrating or too easy. I spent
+            a lot of time tuning these details so the interaction would feel
+            gentle but still engaging, without breaking the dream-like feeling.
+        </p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Euijin Lee · CC Lab</p>
+</footer>
+
 </body>
 </html>
